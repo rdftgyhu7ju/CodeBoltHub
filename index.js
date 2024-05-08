@@ -1,9 +1,9 @@
-function isAnagram(s, t) {
-  if (s.length !== t.length) return false;
-  const count = Array(26).fill(0);
-  for (let i = 0; i < s.length; i++) {
-    count[s.charCodeAt(i) - 97]++;
-    count[t.charCodeAt(i) - 97]--;
+function maxSubArray(nums) {
+  let maxSum = nums[0];
+  let currentSum = nums[0];
+  for (let i = 1; i < nums.length; i++) {
+    currentSum = Math.max(nums[i], currentSum + nums[i]);
+    maxSum = Math.max(maxSum, currentSum);
   }
-  return count.every((c) => c === 0);
+  return maxSum;
 }
