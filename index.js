@@ -1,6 +1,4 @@
-function flattenArray(arr) {
-  return arr.reduce(
-    (acc, curr) => acc.concat(Array.isArray(curr) ? flattenArray(curr) : curr),
-    [],
-  );
+const person = { name: "Alice", age: 30 };
+if (person.hasOwnProperty("age")) {
+  console.log("The person has an age property");
 }
