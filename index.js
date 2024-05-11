@@ -1,4 +1,3 @@
-const person = { name: "Alice", age: 30 };
-if (person.hasOwnProperty("age")) {
-  console.log("The person has an age property");
-}
+const colors = ["red", "green", "blue"];
+const randomColor = colors[Math.floor(Math.random() * colors.length)];
+console.log(randomColor);
